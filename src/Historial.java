@@ -38,6 +38,7 @@ public class Historial {
     }
     public void agregarEstado(int nuevoEstado) {
          String[] opciones = {
+                 "",
                 "En cirugía",
                 "En observación",
                 "Posoperatorio",
