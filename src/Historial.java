@@ -26,13 +26,13 @@ public class Historial {
         this.historialId = historialId;
         this.operado = operado;
     }
-   public void aptoCirugia(boolean apto){
+   public void aptoCirugia(String apto){
         String nombreMascota = cliente.getMascota().getNombre();
-        if (apto) {
-            System.out.println("La mascota: " + nombreMascota + " ingresa a cirugía  " );
-            estados.push("Si es apto, ingresa a cirugía." );
-        }else{
-            System.out.println("La mascota: " + nombreMascota + "no es apto para cirugía, se remite a consulta" );
+        if (apto.trim().equalsIgnoreCase("s")) {
+                System.out.println("La mascota: " + nombreMascota + " ingresa a cirugía  ");
+                estados.push("Si es apto, ingresa a cirugía.");
+        } else {
+            System.out.println("La mascota: " + nombreMascota + " no es apto para cirugía, se remite a consulta");
             estados.push("no es apto para cirugía, se remite a consulta");
         }
     }
